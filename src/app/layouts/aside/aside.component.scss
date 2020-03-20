@@ -19,9 +19,12 @@
     background-color: $dark;
     @include transition(left .3s ease);
     will-change: left;
+    z-index: 1001;
   }
+
   &.open {
     width: $w;
+
     aside {
       left: 0;
     }
@@ -35,16 +38,19 @@
   display: block;
   @include fit(contain);
 }
+
 #aside__menu {
   @extend %pseudo-list;
   display: block;
   border-top: 1px solid #0b0a10;
+
   .aside__item {
     display: block;
     border-bottom: 1px solid #0b0a10;
     background-color: $dark;
     @include transition(all .3s ease);
     position: relative;
+
     &:before {
       @extend %pseudo;
       left: 0;
@@ -57,6 +63,7 @@
 
     &.active, &:hover {
       background-color: #122143;
+
       &:before {
         top: 0;
         height: 100%;
@@ -64,6 +71,7 @@
     }
   }
 }
+
 .aside__item-link {
   display: flex;
   padding: 26px;
@@ -74,9 +82,23 @@
   font-weight: 500;
   cursor: pointer;
 }
+
 .aside__item-icon {
   width: 16px;
   height: 16px;
   @include fit(contain);
   margin-right: 10px;
+}
+
+@media all and (max-width: $screen-sm) {
+
+  #aside-wrapper{
+    aside {
+      width: 100%;
+      left: -100%;
+    }
+    &.open {
+      width: 0;
+    }
+  }
 }

@@ -37,3 +37,19 @@ main {
   }
 }
 
+@media all and (max-width: $screen-md) {
+  main {
+    padding: $section-space;
+  }
+  #upper-cont, #bottom-cont {
+    display: block;
+  }
+  .bottom-section {
+    +.bottom-section {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
