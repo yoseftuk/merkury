@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Task} from '../../models/task';
+import {tasks} from './tasks.data';
 
 @Component({
   selector: 'app-tasks',
@@ -7,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasksComponent implements OnInit {
 
+  tasks: Task[] = tasks;
   constructor() { }
 
   ngOnInit(): void {

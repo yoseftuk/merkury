@@ -15,6 +15,9 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
 import { MessageItemComponent } from './components/message-item/message-item.component';
 import { ActivityItemComponent } from './components/activity-item/activity-item.component';
 import { BottomSectionHeaderComponent } from './components/bottom-section-header/bottom-section-header.component';
+import { TaskTimePipe } from './pipes/task-time.pipe';
+import { ActivityTimePipe } from './pipes/activity-time.pipe';
+import { MinutesBeforePipe } from './pipes/minutes-before.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { BottomSectionHeaderComponent } from './components/bottom-section-header
     TaskItemComponent,
     MessageItemComponent,
     ActivityItemComponent,
-    BottomSectionHeaderComponent
+    BottomSectionHeaderComponent,
+    TaskTimePipe,
+    ActivityTimePipe,
+    MinutesBeforePipe,
   ],
   imports: [
     BrowserModule

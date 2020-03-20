@@ -10,7 +10,7 @@ export class ActivityItemComponent implements OnInit {
   @Input('name') name: string;
   @Input('task') task: string;
   @Input('subject') subject: string;
-  @Input('time') time: string;
+  @Input('time') time: Date;
   @Input('image') image: string;
   constructor() { }
 

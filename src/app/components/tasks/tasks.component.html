@@ -1,47 +1,7 @@
 <app-bottom-section-header [title]="'tasks'" [prNotif]="5" [dangerNotif]="2"></app-bottom-section-header>
 <ul class="body">
-  <li class="item">
-    <div class="badge">{{'N' | uppercase}}</div>
-    <div class="content">
-      <div class="title">New website for Symu.co</div>
-      <div class="time danger">
-        <img class="clock" alt="clock" src="assets/images/clock_danger_ico.png"/>
-        <span class="time-text">2 days delays</span>
-      </div>
-    </div>
-    <div class="ctx-menu"></div>
-  </li>
-  <li class="item">
-    <div class="badge">{{'F' | uppercase}}</div>
-    <div class="content">
-      <div class="title">New website for Symu.co</div>
-      <div class="time danger">
-        <img class="clock" alt="clock" src="assets/images/clock_danger_ico.png"/>
-        <span class="time-text">5 days left</span>
-      </div>
-    </div>
-    <div class="ctx-menu"></div>
-  </li>
-  <li class="item">
-    <div class="badge">{{'N' | uppercase}}</div>
-    <div class="content">
-      <div class="title">New website for Symu.co</div>
-      <div class="time">
-        <img class="clock" alt="clock" src="assets/images/clock_ico.png"/>
-        <span class="time-text">2 days left</span>
-      </div>
-    </div>
-    <div class="ctx-menu"></div>
-  </li>
-  <li class="item">
-    <div class="badge">{{'F' | uppercase}}</div>
-    <div class="content">
-      <div class="title">New website for Symu.co</div>
-      <div class="time">
-        <img class="clock" alt="clock" src="assets/images/clock_ico.png"/>
-        <span class="time-text">5 days delays</span>
-      </div>
-    </div>
-    <div class="ctx-menu"></div>
-  </li>
+  <app-task-item *ngFor="let task of tasks"
+                 [title]="task.title"
+                 [time]="task.time"
+  ></app-task-item>
 </ul>

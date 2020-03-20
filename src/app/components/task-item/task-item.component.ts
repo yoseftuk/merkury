@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-task-item',
@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskItemComponent implements OnInit {
 
+  @Input('title') title: string;
+  @Input('time') time: Date;
   constructor() { }
 
   ngOnInit(): void {
   }
-
+  isPast() {
+    return this.time.getTime() < new Date().getTime();
+  }
 }

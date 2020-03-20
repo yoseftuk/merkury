@@ -1,7 +1,7 @@
 <li class="item" [ngClass]="{unread: unread}">
   <img class="profile-img" alt="profile" [src]="image"/>
   <div class="content">
-    <div><span class="name">{{name}}</span><span class="time">{{time}}</span></div>
+    <div><span class="name">{{name}}</span><span class="time">{{time | activityTime}}</span></div>
     <div class="msg">{{msg}}</div>
     <div class="icons">
       <img alt="forward" class="icon forward" src="assets/images/forward_ico.png"/>
