@@ -66,3 +66,11 @@
   border-top: 1px solid $secondary;
   cursor: pointer;
 }
+%elipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 181px;
+  width: 100%;
+  text-overflow: ellipsis;
+  text-overflow: "(...)";
+}

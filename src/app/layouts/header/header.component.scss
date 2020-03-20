@@ -1,0 +1,127 @@
+@import "../../scss/index";
+
+header {
+  height: $header-h;
+  background-color: white;
+  border-bottom: 1px $secondary solid;
+  @extend %flex-center;
+  padding: 0 36px 0 26px;
+}
+.icon {
+  height: 16px;
+  @include flex-shrink(0);
+  cursor: pointer;
+}
+.hamburger-cont {
+  @include arrow(6px, 225deg, left, $pr-1);
+  cursor: pointer;
+  &:before {
+    left: -9px;
+    @include transform(rotate(45deg));
+    @include transition(all .3s ease);
+  }
+  &.open:before {
+    @include transform(rotate(225deg));
+    left: -3px;
+  }
+}
+.hamburger {
+  margin-right: 24px;
+}
+.search {
+
+}
+.w-100 {
+  width: 100%;
+}
+.mail {
+  margin-right: 20px;
+}
+.bell-cont {
+  position: relative;
+  margin-right: 30px;
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border: 1px solid white;
+    @include badge(10px, $pr-1);
+    @include font(8px, 500, white);
+  }
+}
+.notif {
+  height: 18px;
+}
+.profile {
+  @include arrow(6px, 135deg, right, black);
+  cursor: pointer;
+  &:before {
+    right: -9px;
+    top: calc(50% - #{6px / $root2 + 3});
+  }
+}
+.add-project {
+  @extend %input;
+  @extend %flex-center;
+  width: 118px;
+  height: 32px;
+  background-color: $pr-1;
+  @include font(12px, bold, white);
+  @include border-radius(16px);
+  @include flex-shrink(0);
+  margin-right: 35px;
+  cursor: pointer;
+  .plus {
+    $w: 8px;
+    $v: 1.5px;
+    $bg: lighten($pr-1, 20%);
+    width: $w;
+    height: $w;
+    position: relative;
+    &:before {
+      @extend %pseudo;
+      width: $w;
+      height: $v;
+      left: 0;
+      top: calc(50% - #{$v/2});
+      background-color: $bg;
+    }
+    &:after {
+      @extend %pseudo;
+      height: $w;
+      width: $v;
+      top: 0;
+      left: calc(50% - #{$v/2});
+      background-color: $bg;
+    }
+  }
+  .add {
+    margin-left: 4px;
+  }
+}
+.profile-image {
+  width: 34px;
+  height: 34px;
+  display: block;
+  @extend %circle;
+}
+
+@media only screen and (max-width: $screen-sm) {
+  .hamburger {
+    margin-right: 15px;
+  }
+  .mail {
+    margin-right: 15px;
+  }
+  .notif {
+    margin-right: 15px;
+  }
+  .add-project {
+    margin-right: 15px;
+    width: 34px;
+    height: 34px;
+    .add {
+      display: none;
+    }
+  }
+}

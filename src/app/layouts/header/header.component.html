@@ -1,1 +1,19 @@
-<p>header works!</p>
+<header>
+  <span class="hamburger-cont" (click)="isOpen = !isOpen" [ngClass]="{open: isOpen}">
+    <img class="icon hamburger" alt="menu" src="assets/images/humburger_ico.png"/>
+  </span>
+  <img class="icon search" alt="menu" src="assets/images/search_ico.png"/>
+  <div class="w-100"></div>
+  <button class="add-project">
+    <span class="plus"></span>
+    <span class="add">&nbsp;Add project</span>
+  </button>
+  <img class="icon mail" alt="mail" src="assets/images/mail_ico.png"/>
+  <span class="bell-cont">
+    <img class="icon notif" alt="notifications" src="assets/images/bell_ico.png"/>
+    <span *ngIf="notifications > 0" class="badge">{{notifications}}</span>
+  </span>
+  <div class="profile">
+    <img class="profile-image" alt="profile" src="assets/images/profile_placeholder.png"/>
+  </div>
+</header>

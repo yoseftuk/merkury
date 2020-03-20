@@ -10,7 +10,6 @@ import { ReportComponent } from './components/report/report.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { ActivityComponent } from './components/activity/activity.component';
-import { TaskComponent } from './components/task/task.component';
 import { TaskItemComponent } from './components/task-item/task-item.component';
 import { MessageItemComponent } from './components/message-item/message-item.component';
 import { ActivityItemComponent } from './components/activity-item/activity-item.component';
@@ -30,7 +29,6 @@ import { MinutesBeforePipe } from './pipes/minutes-before.pipe';
     TasksComponent,
     MessagesComponent,
     ActivityComponent,
-    TaskComponent,
     TaskItemComponent,
     MessageItemComponent,
     ActivityItemComponent,

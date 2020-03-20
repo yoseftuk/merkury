@@ -10,6 +10,7 @@
 .content {
   .title {
     @include font(13.5px, 500, $dark);
+    @extend %elipsis;
   }
   .time {
     @include font(9px, normal, $secondary);

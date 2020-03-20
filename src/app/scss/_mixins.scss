@@ -142,3 +142,18 @@
   background-color: $bg;
   @include font(16px, 500, white);
 }
+@mixin arrow($arrow-w, $deg, $position, $color) {
+  padding-#{$position}: $arrow-w / $root2;
+  position: relative;
+  &:before {
+    @extend %pseudo;
+    width: 0;
+    height: 0;
+    border: $arrow-w/2 solid;
+    border-color: $color $color transparent transparent;
+    top: calc(50% - #{$arrow-w/2*$root2});
+    #{$position}: -$arrow-w/2;
+    @include transform-origin(center center);
+    @include transform(rotate($deg));
+  }
+}
