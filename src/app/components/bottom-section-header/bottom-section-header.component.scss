@@ -1,0 +1,20 @@
+@import "../../scss/index";
+
+.header {
+  padding: 23px;
+  font-size: 12pt;
+  font-weight: 500;
+  display: flex;
+  @include align-items(center);
+}
+.w-100 {
+  width: 100%;
+}
+.badge {
+  @include badge(30px, $pr-2);
+  @include flex-shrink(0);
+  margin-left: 8px;
+}
+.danger-badge {
+  background-color: $danger;
+}

@@ -42,6 +42,11 @@
   -ms-touch-action: auto;
   -webkit-touch-callout: default;
 }
+%pseudo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 %no-select {
   @include user-select(none);
 }
@@ -53,4 +58,11 @@
 }
 %roboto {
   font-family: 'Roboto', sans-serif;
+}
+%list-item {
+  display: flex;
+  @include align-items(center);
+  padding: 20px 23px;
+  border-top: 1px solid $secondary;
+  cursor: pointer;
 }

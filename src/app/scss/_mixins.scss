@@ -16,11 +16,10 @@
   -o-box-shadow: $val;
   -webkit-box-shadow: $val;
 }
-@mixin font($size, $weight:normal, $color: #000000, $family: 'Nunito') {
+@mixin font($size, $weight:normal, $color: #000000) {
   font-size: $size;
   font-weight: $weight;
   color: $color;
-  font-family: $family, sans-serif;
 }
 @mixin border-radius($val) {
   border-radius: $val;
@@ -118,4 +117,28 @@
   height: $height;
   top: $top;
   left: $left;
+}
+@mixin upper-section($ratio-w, $ratio-h) {
+  &-wrapper {
+    background-color: white;
+    width: 100%;
+    flex-shrink: $ratio-w;
+    margin-bottom: $section-space;
+    border: 1px solid $secondary;
+  }
+  &-cont {
+    padding-bottom: $ratio-h;
+    position: relative;
+  }
+  &-content {
+    @extend %match-parent;
+  }
+}
+@mixin badge($w, $bg) {
+  width: $w;
+  height: $w;
+  @extend %circle;
+  @extend %flex-center;
+  background-color: $bg;
+  @include font(16px, 500, white);
 }

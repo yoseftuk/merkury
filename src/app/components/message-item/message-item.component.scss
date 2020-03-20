@@ -1,0 +1,41 @@
+@import "../../scss/index";
+
+.item {
+  @extend %list-item;
+  padding-bottom: 11px;
+  &.unread {
+    background-color: #dadee7;
+  }
+}
+.profile-img {
+  width: 31px;
+  height: 31px;
+  display: block;
+  @extend %circle;
+  @include fit(cover);
+  margin: 0 18px 9px 0;
+}
+.content {
+  @include font(9px, normal, $dark)
+}
+.name {
+  font-weight: 500;
+  margin-right: 4px;
+}
+.time {
+  color: $secondary;
+}
+.msg {
+  margin-top: 4px;
+  white-space: nowrap;
+  max-width: 185px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-overflow: "(...)";
+}
+.icon {
+  width: 10px;
+  height: 10px;
+  @include fit(contain);
+  margin: 4px 4px 0 0;
+}

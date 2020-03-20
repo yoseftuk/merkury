@@ -1,0 +1,33 @@
+@import "../../scss/index";
+
+.item {
+  @extend %list-item;
+  @include font(9px, normal, $secondary);
+  padding-bottom: 23px;
+}
+.profile-img {
+  width: 31px;
+  height: 31px;
+  display: block;
+  @extend %circle;
+  @include fit(cover);
+  margin: 0 18px 0 0;
+}
+.name {
+  color: $dark;
+  font-weight: 500;
+}
+.time {
+  margin-top: 4px;
+  &.danger {
+    color: $danger;
+  }
+  .clock {
+    height: 11px;
+    display: inline-block;
+    margin-right: 4px;
+  }
+  .time-text {
+    vertical-align: top;
+  }
+}

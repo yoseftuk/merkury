@@ -1,0 +1,6 @@
+@import "../../scss/index";
+
+.body {
+  @extend %pseudo-list;
+  display: block;
+}

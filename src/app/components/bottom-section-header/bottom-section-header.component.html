@@ -1,0 +1,6 @@
+<div class="header">
+  {{title | titlecase}}
+  <div class="w-100"></div>
+  <div class="badge pr-badge" *ngIf="prNotif">{{prNotif}}</div>
+  <div class="badge danger-badge" *ngIf="dangerNotif">{{dangerNotif}}</div>
+</div>

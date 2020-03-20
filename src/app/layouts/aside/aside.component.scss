@@ -1,0 +1,82 @@
+@import "../../scss/index";
+
+#aside-wrapper {
+  $w: 210px;
+  @include flex-shrink(0);
+  width: 0;
+  height: 100vh;
+  @include transition(width .3s ease);
+  will-change: width;
+  overflow: hidden;
+  position: relative;
+
+  aside {
+    width: $w;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -$w;
+    background-color: $dark;
+    @include transition(left .3s ease);
+    will-change: left;
+  }
+  &.open {
+    width: $w;
+    aside {
+      left: 0;
+    }
+  }
+}
+
+#logo {
+  width: 120px;
+  height: $header-h;
+  padding: 0 26px;
+  display: block;
+  @include fit(contain);
+}
+#aside__menu {
+  @extend %pseudo-list;
+  display: block;
+  border-top: 1px solid #0b0a10;
+  .aside__item {
+    display: block;
+    border-bottom: 1px solid #0b0a10;
+    background-color: $dark;
+    @include transition(all .3s ease);
+    position: relative;
+    &:before {
+      @extend %pseudo;
+      left: 0;
+      top: 50%;
+      width: 4px;
+      height: 0;
+      background-color: $pr-1;
+      @include transition(all .3s ease);
+    }
+
+    &.active, &:hover {
+      background-color: #122143;
+      &:before {
+        top: 0;
+        height: 100%;
+      }
+    }
+  }
+}
+.aside__item-link {
+  display: flex;
+  padding: 26px;
+  color: white;
+  text-decoration: none;
+  @extend %roboto;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.aside__item-icon {
+  width: 16px;
+  height: 16px;
+  @include fit(contain);
+  margin-right: 10px;
+}

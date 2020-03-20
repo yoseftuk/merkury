@@ -1,0 +1,11 @@
+<li class="item" [ngClass]="{unread: unread}">
+  <img class="profile-img" alt="profile" [src]="image"/>
+  <div class="content">
+    <div><span class="name">{{name}}</span><span class="time">{{time}}</span></div>
+    <div class="msg">{{msg}}</div>
+    <div class="icons">
+      <img alt="forward" class="icon forward" src="assets/images/forward_ico.png"/>
+      <img alt="settings" class="icon settings" src="assets/images/settings_sec_ico.png"/>
+    </div>
+  </div>
+</li>
