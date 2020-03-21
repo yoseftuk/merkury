@@ -14,6 +14,9 @@ import {ActivityTimePipe} from './pipes/activity-time.pipe';
 import {TaskTimePipe} from './pipes/task-time.pipe';
 import {SalesComponent} from './components/sales/sales.component';
 import {ReportComponent} from './components/report/report.component';
+import {UpperSectionHeaderComponent} from './components/upper-section-header/upper-section-header.component';
+import {ForinPipe} from './pipes/forin.pipe';
+import {EntriesPipe} from './pipes/entries.pipe';
 
 describe('AppComponent', () => {
   let component: AppComponent;
@@ -34,8 +37,11 @@ describe('AppComponent', () => {
         BottomSectionHeaderComponent,
         SalesComponent,
         ReportComponent,
+        UpperSectionHeaderComponent,
         ActivityTimePipe,
-        TaskTimePipe
+        TaskTimePipe,
+        ForinPipe,
+        EntriesPipe
       ],
     }).compileComponents();
   }));

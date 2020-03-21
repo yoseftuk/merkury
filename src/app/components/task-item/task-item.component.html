@@ -2,8 +2,8 @@
   <div class="badge">{{(title || '')[0] | uppercase}}</div>
   <div class="content">
     <div class="title">{{title}}</div>
-    <div class="time" [ngClass]="{danger: !isPast()}">
-      <img class="clock" alt="clock" [src]="isPast() ? 'assets/images/clock_ico.png' : 'assets/images/clock_danger_ico.png'"/>
+    <div class="time" [ngClass]="{danger: !isPast(time)}">
+      <img class="clock" alt="clock" [src]="isPast(time) ? 'assets/images/clock_ico.png' : 'assets/images/clock_danger_ico.png'"/>
       <span class="time-text">{{time | taskTime}}</span>
     </div>
   </div>

@@ -57,4 +57,13 @@ describe('TaskItemComponent', () => {
     compiled = fixture.nativeElement;
     expect(compiled.querySelector('.time').textContent).toContain(new TaskTimePipe().transform(date));
   });
+  it('should return true value for isPast function', () => {
+    expect(component.isPast(new Date(new Date().getTime() + 1e3))).toBeFalse();
+    expect(component.isPast(new Date(new Date().getTime() + 1e2))).toBeFalse();
+    expect(component.isPast(new Date(new Date().getTime() + 1e5))).toBeFalse();
+    expect(component.isPast(new Date(new Date().getTime() + 1e10))).toBeFalse();
+    expect(component.isPast(new Date(new Date().getTime()))).toBeTrue();
+    expect(component.isPast(new Date(new Date().getTime() - 1e3))).toBeTrue();
+    expect(component.isPast(new Date(new Date().getTime() - 1e2))).toBeTrue();
+  });
 });

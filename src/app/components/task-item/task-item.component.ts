@@ -7,13 +7,13 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class TaskItemComponent implements OnInit {
 
-  @Input('title') title: string;
-  @Input('time') time: Date = new Date();
+  @Input() title: string;
+  @Input() time: Date = new Date();
   constructor() { }
 
   ngOnInit(): void {
   }
-  isPast() {
-    return this.time.getTime() < new Date().getTime();
+  isPast(time) {
+    return time.getTime() <= new Date().getTime();
   }
 }

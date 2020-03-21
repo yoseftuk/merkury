@@ -12,6 +12,9 @@ import {ActivityItemComponent} from '../../components/activity-item/activity-ite
 import {BottomSectionHeaderComponent} from '../../components/bottom-section-header/bottom-section-header.component';
 import {SalesComponent} from '../../components/sales/sales.component';
 import {ReportComponent} from '../../components/report/report.component';
+import {UpperSectionHeaderComponent} from '../../components/upper-section-header/upper-section-header.component';
+import {ForinPipe} from '../../pipes/forin.pipe';
+import {EntriesPipe} from '../../pipes/entries.pipe';
 
 describe('MainComponent', () => {
   let component: MainComponent;
@@ -30,8 +33,11 @@ describe('MainComponent', () => {
         BottomSectionHeaderComponent,
         SalesComponent,
         ReportComponent,
+        UpperSectionHeaderComponent,
         ActivityTimePipe,
-        TaskTimePipe
+        TaskTimePipe,
+        ForinPipe,
+        EntriesPipe
       ]
     })
     .compileComponents();

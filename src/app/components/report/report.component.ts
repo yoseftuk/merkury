@@ -27,15 +27,14 @@ export class ReportComponent implements OnInit {
     return i * this.pathInterval;
   }
   getPath(data) {
-    let str = `M 0 ${this.getY(data[0])} `;
     let lastY = this.getY(data[0]);
-    data.slice(1).forEach((t, i) => {
+    return data.slice(1).reduce((a, t, i) => {
       const x = this.getX(i + 1);
       const y = this.getY(t);
-      str += `C ${x - this.pathInterval / 2} ${lastY}, ${x - this.pathInterval / 2} ${y}, ${x} ${y} `;
+      const res = `C ${x - this.pathInterval / 2} ${lastY}, ${x - this.pathInterval / 2} ${y}, ${x} ${y} `;
       lastY = y;
-    });
-    return str;
+      return a + res;
+    }, `M 0 ${this.getY(data[0])} `);
   }
 
 }
