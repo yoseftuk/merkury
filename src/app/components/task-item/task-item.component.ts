@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class TaskItemComponent implements OnInit {
 
   @Input('title') title: string;
-  @Input('time') time: Date;
+  @Input('time') time: Date = new Date();
   constructor() { }
 
   ngOnInit(): void {

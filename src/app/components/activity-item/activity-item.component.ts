@@ -8,10 +8,18 @@ import {Component, Input, OnInit} from '@angular/core';
 export class ActivityItemComponent implements OnInit {
 
   @Input('name') name: string;
-  @Input('task') task: string;
+  @Input('task') task: number;
   @Input('subject') subject: string;
-  @Input('time') time: Date;
+  @Input('time') time: Date = new Date();
   @Input('image') image: string;
+  tasks = [
+    'created a new project',
+    'created a new task',
+    'completed project',
+    'completed task',
+    'commented project',
+    'commented task'
+  ];
   constructor() { }
 
   ngOnInit(): void {

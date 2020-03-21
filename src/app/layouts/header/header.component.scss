@@ -11,6 +11,7 @@ header {
   height: 16px;
   @include flex-shrink(0);
   cursor: pointer;
+  display: block;
 }
 .hamburger-cont {
   @include arrow(6px, 225deg, left, $pr-1);

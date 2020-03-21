@@ -7,7 +7,7 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  isOpen: boolean = false;
+  isOpen: boolean = true;
   notifications: number = 3;
   constructor() { }
 

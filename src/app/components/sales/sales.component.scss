@@ -1,0 +1,8 @@
+@import "../../scss/index";
+
+#sales {
+  @include upper-section(887, 81.28249566724437%);
+  &-wrapper {
+    margin-right: $section-space;
+  }
+}

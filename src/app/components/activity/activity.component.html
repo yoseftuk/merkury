@@ -1,8 +1,8 @@
 <app-bottom-section-header [title]="'activity'" [prNotif]="10" [dangerNotif]="0"></app-bottom-section-header>
 <ul class="body">
-  <app-activity-item *ngFor="let activity of activities"
+  <app-activity-item *ngFor="let activity of activities.slice(0, 4)"
     [name]="activity.name"
-    [task]="'added a new project'"
+    [task]="activity.type"
     [subject]="activity.subject"
     [time]="activity.time"
     [image]="activity.image"

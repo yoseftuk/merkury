@@ -8,7 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class MessageItemComponent implements OnInit {
 
   @Input('name') name: string;
-  @Input('time') time: Date;
+  @Input('time') time: Date = new Date();
   @Input('msg') msg: string;
   @Input('image') image: string;
   @Input('unread') unread: boolean;

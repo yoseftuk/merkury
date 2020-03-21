@@ -89,16 +89,3 @@
   @include fit(contain);
   margin-right: 10px;
 }
-
-@media all and (max-width: $screen-sm) {
-
-  #aside-wrapper{
-    aside {
-      width: 100%;
-      left: -100%;
-    }
-    &.open {
-      width: 0;
-    }
-  }
-}

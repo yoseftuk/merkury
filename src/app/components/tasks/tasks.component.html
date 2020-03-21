@@ -1,6 +1,6 @@
 <app-bottom-section-header [title]="'tasks'" [prNotif]="5" [dangerNotif]="2"></app-bottom-section-header>
 <ul class="body">
-  <app-task-item *ngFor="let task of tasks"
+  <app-task-item *ngFor="let task of tasks.slice(0, 4)"
                  [title]="task.title"
                  [time]="task.time"
   ></app-task-item>

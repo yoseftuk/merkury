@@ -1,5 +1,5 @@
 <li class="item">
-  <div class="badge">{{title[0] | uppercase}}</div>
+  <div class="badge">{{(title || '')[0] | uppercase}}</div>
   <div class="content">
     <div class="title">{{title}}</div>
     <div class="time" [ngClass]="{danger: !isPast()}">

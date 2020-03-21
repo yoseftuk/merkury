@@ -1,6 +1,6 @@
 <app-bottom-section-header [title]="'messages'" [prNotif]="2" [dangerNotif]="0"></app-bottom-section-header>
 <ul class="body">
-  <app-message-item *ngFor="let message of messages"
+  <app-message-item *ngFor="let message of messages.slice(0, 4)"
     [image]="message.image"
     [name]="message.name"
     [time]="message.time"
