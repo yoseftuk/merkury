@@ -118,20 +118,13 @@
   top: $top;
   left: $left;
 }
-@mixin upper-section($ratio-w, $ratio-h) {
+@mixin upper-section($ratio-w) {
   &-wrapper {
     background-color: white;
     width: 100%;
     flex-shrink: $ratio-w;
     margin-bottom: $section-space;
     border: 1px solid $secondary;
-  }
-  &-cont {
-    padding-bottom: $ratio-h;
-    position: relative;
-  }
-  &-content {
-    @extend %match-parent;
   }
 }
 @mixin badge($w, $bg) {

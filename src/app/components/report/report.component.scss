@@ -1,2 +1,14 @@
 @import "../../scss/index";
 
+svg {
+  width: 100%;
+}
+#graph {
+  stroke-dasharray: 200%;
+  stroke-dashoffset: 0;
+  @include animation(1.5s dashoffset 1 ease);
+}
+@include keyframes(dashoffset) {
+  from {stroke-dashoffset: 200%}
+  to{stroke-dashoffset: 0}
+}

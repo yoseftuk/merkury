@@ -17,6 +17,9 @@ import { BottomSectionHeaderComponent } from './components/bottom-section-header
 import { TaskTimePipe } from './pipes/task-time.pipe';
 import { ActivityTimePipe } from './pipes/activity-time.pipe';
 import { MinutesBeforePipe } from './pipes/minutes-before.pipe';
+import { UpperSectionHeaderComponent } from './components/upper-section-header/upper-section-header.component';
+import { EntriesPipe } from './pipes/entries.pipe';
+import { ForinPipe } from './pipes/forin.pipe';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { MinutesBeforePipe } from './pipes/minutes-before.pipe';
     TaskTimePipe,
     ActivityTimePipe,
     MinutesBeforePipe,
+    UpperSectionHeaderComponent,
+    EntriesPipe,
+    ForinPipe,
   ],
   imports: [
     BrowserModule

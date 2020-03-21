@@ -1,0 +1,18 @@
+<app-upper-section-header [title]="'sales'"></app-upper-section-header>
+<svg  xmlns="http://www.w3.org/2000/svg" [attr.viewBox]="'0 0 577 361'">
+  <g id="gpaph">
+    <ng-container *ngFor="let path of arcs">
+      <path [ngStyle]="{fill: path.color}" [attr.d]="path.path"></path>
+    </ng-container>
+  </g>
+  <g id="total"  text-anchor="middle" fill="#8492af">
+    <text [attr.x]="cx" [attr.y]="cy" alignment-baseline="baseline" font-size="36" font-weight="bold">{{total}}</text>
+    <text class="sales" [attr.x]="cx" [attr.y]="cy + 10" dominant-baseline="hanging" font-size="20">Sales</text>
+  </g>
+  <g id="legends" fill="#8492af">
+    <ng-container *ngFor="let legend of (labels | entries); let i = index">
+      <circle [attr.cx]="legendsX" [attr.cy]="legendsY + i * legendsSpace" r="6" [attr.fill]="legend[1]"></circle>
+      <text [attr.x]="legendsX + 25" [attr.y]="legendsY + i * legendsSpace" alignment-baseline="middle" font-size="20">{{legend[0]}}</text>
+    </ng-container>
+  </g>
+</svg>

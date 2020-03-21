@@ -1,0 +1,43 @@
+@import '../../scss/index';
+
+.header {
+  display: flex;
+  padding: 20px 24px;
+}
+.title {
+  @include font(24px, bold, $secondary);
+  padding:0;
+  margin:0;
+}
+.period {
+  margin-left: auto;
+  @extend %input;
+  border: 1px opacify($secondary, .3) solid;
+  @include border-radius(16px);
+  background-color: white;
+  width: 135px;
+  height: 32px;
+  @extend %flex-center;
+  cursor: pointer;
+}
+.period-value {
+  @include font(10px, bold, $dark);
+  font-family: 'Roboto', sans-serif;
+
+  &:before {
+    content: 'period: ';
+    @include font(10px, normal, $secondary);
+  }
+  &:after {
+    $w: 3px;
+    content: '';
+    display: inline-block;
+    width: $w;
+    height: $w;
+    border: 1px solid;
+    border-color: $secondary $secondary transparent transparent;
+    @include transform-origin(center);
+    @include transform(rotate(135deg));
+    margin: 0 0 #{($w+1) / 2} 28px;
+  }
+}

@@ -12,6 +12,10 @@ header {
   @include flex-shrink(0);
   cursor: pointer;
   display: block;
+  @include transition(all .3s ease);
+  &:hover {
+    @include filter(drop-shadow(0 0 7px $pr-1));
+  }
 }
 .hamburger-cont {
   @include arrow(6px, 225deg, left, $pr-1);
@@ -72,6 +76,13 @@ header {
   @include flex-shrink(0);
   margin-right: 35px;
   cursor: pointer;
+  @include transition(all .3s ease);
+  @include box-shadow(0 0 0 $pr-1);
+  will-change: background-color, box-shadow;
+  &:hover {
+    background-color: $dark;
+    @include box-shadow(0 0 10px $pr-1);
+  }
   .plus {
     $w: 8px;
     $v: 1.5px;

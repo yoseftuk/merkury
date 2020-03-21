@@ -16,13 +16,13 @@ main {
   display: flex;
 }
 #sales {
-  @include upper-section(887, 81.28249566724437%);
+  @include upper-section(887);
   &-wrapper {
     margin-right: $section-space;
   }
 }
 #report {
-  @include upper-section(577, 52.87485907553551%);
+  @include upper-section(577);
 }
 #bottom-cont {
   display: flex;

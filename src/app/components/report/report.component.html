@@ -1,7 +1,31 @@
-<div id="report-wrapper">
-  <div id="report-cont">
-    <div id="report-content">
+<app-upper-section-header [title]="'report'"></app-upper-section-header>
+<svg  xmlns="http://www.w3.org/2000/svg" [attr.viewBox]="'0 0 887 361'">
+  <g id="vertical-lines" stroke="rgba(132, 146, 175, 0.3)">
+    <line *ngFor="let i of (7 | forin)"
+          [attr.x1]="startX + i * horizontalSpace"
+          [attr.y1]="startY - 34"
+          [attr.x2]="startX + i * horizontalSpace"
+          [attr.y2]="startY + verticalHeight - 34"
+    ></line>
+  </g>
+  <g id="horizontal-lines" stroke="rgba(132, 146, 175, 0.3)">
+    <line *ngFor="let i of (7 | forin)"
+          [attr.x1]="startX"
+          [attr.y1]="startY + i * verticalSpace"
+          [attr.x2]="startX + horizontalHeight"
+          [attr.y2]="startY + i * verticalSpace"
+    ></line>
+  </g>
+  <g id="legends"
+     fill="rgba(132, 146, 175, 0.3)"
+     font-size="18"
+     text-anchor="end"
+  >
+    <text *ngFor="let i of (7 | forin)" alignment-baseline="middle"
+          [attr.x]="startX - 6"
+          [attr.y]="startY + i * verticalSpace "
+    >{{800 - (i + 1) * 100}}</text>
+  </g>
+  <path id="graph" [attr.d]="getPath(data)" fill="transparent" stroke="#5584ff" stroke-width="6"></path>
+</svg>
 
-    </div>
-  </div>
-</div>
