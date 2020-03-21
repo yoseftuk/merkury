@@ -134,6 +134,7 @@
   @extend %flex-center;
   background-color: $bg;
   @include font(16px, 500, white);
+  @include flex-shrink(0);
 }
 @mixin arrow($arrow-w, $deg, $position, $color) {
   padding-#{$position}: $arrow-w / $root2;

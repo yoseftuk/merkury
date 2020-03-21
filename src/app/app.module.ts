@@ -20,7 +20,6 @@ import { MinutesBeforePipe } from './pipes/minutes-before.pipe';
 import { UpperSectionHeaderComponent } from './components/upper-section-header/upper-section-header.component';
 import { EntriesPipe } from './pipes/entries.pipe';
 import { ForinPipe } from './pipes/forin.pipe';
-import { StickyTopDirective } from './directives/sticky-top.directive';
 
 @NgModule({
   declarations: [
@@ -43,7 +42,6 @@ import { StickyTopDirective } from './directives/sticky-top.directive';
     UpperSectionHeaderComponent,
     EntriesPipe,
     ForinPipe,
-    StickyTopDirective,
   ],
   imports: [
     BrowserModule
