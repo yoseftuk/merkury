@@ -3,6 +3,7 @@
 header {
   height: $header-h;
   background-color: white;
+  position: relative;
   border-bottom: 1px $secondary solid;
   @extend %flex-center;
   padding: 0 36px 0 26px;
