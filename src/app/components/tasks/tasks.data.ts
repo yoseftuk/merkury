@@ -6,15 +6,15 @@ const getDate = new MinutesBeforePipe().transform;
 export const tasks: Task[] = [
   {
     title: 'New website for Symu.co',
-    time: getDate(60 * 24 * 5 - 14)
+    time: getDate(-60 * 24 * 5 - 14)
   }, {
     title: 'Free business PSD Template',
-    time: getDate(60 * 24 * 2 - 4)
+    time: getDate(-60 * 24 * 2 - 4)
   }, {
     title: 'New logo for JCD.pl',
-    time: getDate(-60 * 24 * 5 + 34)
+    time: getDate(60 * 24 * 5 + 34)
   }, {
     title: 'Free Icons Set vol. 3',
-    time: getDate(-60 * 24 * 10 + 84)
+    time: getDate(60 * 24 * 10 + 84)
   }
 ];
